@@ -1,0 +1,15 @@
+<div class='container-lg row border-bottom' style="margin-bottom:10px; padding-bottom:8px;">
+<div class="col-11">
+  <h4 style="color:rgb(120,120,120);">{{job['title']}}</h4>        
+
+  {% if 'location' in job: %}
+  <b>Location:</b> {{job['location']}} <br/>
+  {% endif %}
+  {% if 'salary' in job: %}
+    <div><b>Salary:</b> {{job['salary']}} <br/></div>
+  {% endif %}
+</div>
+<div class="col-1">
+  <button class='btn btn-outline-info'>Apply</button>
+</div>
+</div>
