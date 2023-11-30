@@ -1,4 +1,4 @@
-<div class='container-lg row border-bottom' style="margin-bottom:10px; padding-bottom:8px;">
+<div class='container-lg row border-bottom' style="margin-bottom:10px; padding-bottom:10 px;">
 <div class="col-11">
   <h4 style="color:rgb(120,120,120);">{{job['title']}}</h4>        
 
@@ -8,8 +8,11 @@
   {% if 'salary' in job: %}
     <div><b>Salary:</b> {{job['salary']}} <br/></div>
   {% endif %}
+  {% if 'experience' in job: %}
+    <div><b>Experience:</b> {{job['experience']}} <br/></div>
+  {% endif %}
 </div>
 <div class="col-1">
-  <button class='btn btn-outline-info'>Apply</button>
+  <a href="mailto:samineigoutham@gmail.com?subject=You%20are%20applying%20from%20{{job['title']}}&body=name%20%3A%20%3CEnter%20the%20name%3E%0D%0Aresume%20%3A%20%3Cattach%20the%20resume%20link%3E%0D%0A" type="button" class='btn btn-outline-info'>Apply</a>
 </div>
 </div>
